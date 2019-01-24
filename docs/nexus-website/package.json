@@ -4,7 +4,7 @@
   "description": "Product page of the Nexus Platform",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf dist && mkdir dist && parcel build index.html --public-url ./",
+    "build": "rm -rf dist && mkdir dist && parcel build index.html --public-url ./ --no-source-maps --no-minify",
     "build-docker": "docker build -f docker/Dockerfile -t ${npm_package_name} .",
     "start": "parcel index.html -p 8888 --no-source-maps",
     "test": "true"
@@ -16,6 +16,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "eslint": "^4.18.1",
+    "node-sass": "^4.11.0",
     "parcel-bundler": "latest",
     "sass": "^1.16.1"
   },
