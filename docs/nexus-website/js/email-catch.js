@@ -9,10 +9,8 @@ function serializeFormData($form) {
 
 // keys of data must match exactly column headers in gSheets
 function submitForm(api, data) {
-  return new Promise((resolve, reject) => {
-    $.post(api, data)
-      .done(resolve)
-      .fail(reject);
+  return fetch(api + `?name=${data.name}&email=${data.email}`, {
+    method: "get"
   });
 }
 
@@ -41,7 +39,7 @@ function renderFailed($form) {
 }
 
 export default (apiPath, $form) => {
-  $form.on('submit', function (e) {
+  $form.on("submit", function(e) {
     e.preventDefault();
     let data = serializeFormData($(this));
     renderPending($form);

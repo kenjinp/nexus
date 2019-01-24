@@ -13,8 +13,6 @@ require("jquery-ui-dist/jquery-ui.js");
 require("jquery-modal");
 const $ = jquery;
 
-const gSheetId = "1JinUsvnkf2OtvqFrpZQ6Q_fYh7GNu_brydPDV1xY8io";
-
 const EMAIL_CATCH_API_URL = `https://script.google.com/macros/s/AKfycbzG21hsMSsWiPa5fDd6IbPzrfPvZKVf0Xy7eJ4RmxWh38VHJIQ/exec`;
 
 const CONTACT_FORM_API_URL = EMAIL_CATCH_API_URL;
