@@ -1,3 +1,5 @@
+@import "./code.scss";
+
 html {
   height: auto;
   font-size: 14px;
@@ -21,6 +23,7 @@ html {
   box-sizing: inherit;
 }
 body {
+  perspective: 100vw;
   min-height: 100vh;
   box-sizing: border-box;
   display: flex;
@@ -29,7 +32,7 @@ body {
   margin: 0;
   color: #555;
   padding: 0;
-  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-family: Roboto, Helvetica, sans-serif;
   justify-content: space-between;
   background-color: #c5dfeb;
   background: linear-gradient(#c5dfeb 10%, #e2e7ea);
@@ -45,6 +48,9 @@ p {
 section {
   position: relative;
   box-sizing: border-box;
+}
+.subtle-text {
+  color: rgba(255, 255, 255, 0.75);
 }
 .grid {
   position: absolute;
@@ -65,11 +71,42 @@ section {
 }
 
 .call-to-action {
-  font-size: 1.5em;
+  font-size: 1em;
   margin-top: 1em;
   background-size: 1px 100px;
 }
 
+.introducing {
+  background-color: #ffffff1f;
+  padding: 1em;
+  border-radius: 2px;
+  font-size: 16px;
+  width: auto;
+  display: inline-block;
+  a {
+    color: white;
+    .new {
+      padding: 8px;
+      border-radius: 2px;
+      background-color: #c7eddd;
+      background-image: linear-gradient(45deg, #bfeeff 0%, #c7eddd 74%);
+      margin-right: 1em;
+      color: #f6f6f6;
+      box-shadow: -2px 3px 1px #00000033;
+      text-shadow: -1px 1px 1px #00000033;
+    }
+  }
+}
+.not-subtle {
+  position: absolute;
+  top: 6%;
+  height: 500px;
+  width: 500px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
 .wrapper {
   background-color: white;
   margin: 0 auto;
@@ -80,7 +117,7 @@ section {
 }
 
 .not-subtle {
-  width: 200px;
+  // width: 200px;
   margin: 4em;
 }
 
@@ -273,20 +310,46 @@ section {
 
 .hero {
   /* background-color: #f8ceec; */
-  background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
+  // background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
+  // background-image: radial-gradient(
+  //   ellipse at center -50%,
+  //   #18334f 0%,
+  //   #18334f 18%,
+  //   #192532 57%,
+  //   #2d2f38f0 100%
+  // );
+  background-color: #1f3957;
   background-image: radial-gradient(
     ellipse at center -50%,
     #18334f 0%,
     #18334f 18%,
     #192532 57%,
-    #2d2f38f0 100%
+    #192532 100%
   );
-  padding-bottom: 8rem;
-  padding-top: 8rem;
+  padding-bottom: 14rem;
+  padding-top: 10rem;
   position: relative;
   width: 100%;
   height: 100%;
   color: white;
+}
+
+.above-lines {
+  z-index: 100;
+}
+
+.face-off {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.choose-sides {
+  padding: 3em;
+}
+
+.get-started {
+  width: 100%;
+  text-align: center;
 }
 
 canvas.lines {
@@ -458,7 +521,7 @@ figure b {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height:20vh;
+  min-height: 20vh;
 }
 
 textarea {
@@ -1072,13 +1135,13 @@ ul.menu {
   padding: 0 8px;
 }
 .emph.in::before {
-  transform: scale3d(1,1,1);
+  transform: scale3d(1, 1, 1);
   opacity: 0.5;
 }
 
 .emph::before {
   background: rgba(185, 233, 212, 1);
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
   bottom: 0;
@@ -1086,10 +1149,10 @@ ul.menu {
   width: 80%;
   height: 50%;
   opacity: 0.3;
-  transform: scale3d(0,1,1);
+  transform: scale3d(0, 1, 1);
   transform-origin: 0% 50%;
   transition: transform 0.5s;
-  transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
 @keyframes emphasis {
@@ -1108,14 +1171,13 @@ ul.menu {
   }
 }
 
-
 @keyframes fadeInAlmost {
   0% {
     opacity: 0;
   }
 
   100% {
-    opacity: 0.5;
+    opacity: 0.2;
   }
 }
 
@@ -1180,6 +1242,7 @@ ul.menu {
     width: 100px;
     margin: 0 2em;
   }
+
   .hero h1 {
     font-size: 1.5em;
   }

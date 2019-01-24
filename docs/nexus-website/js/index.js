@@ -13,14 +13,14 @@ require("jquery-ui-dist/jquery-ui.js");
 require("jquery-modal");
 const $ = jquery;
 
-const EMAIL_CATCH_API_URL =
-  "https://script.google.com/macros/s/AKfycbyShA-fZV1b_eYb0UNAwr1FZGwGjTzeGa-QKlomEeVlrQSJhA4/exec";
+const gSheetId = "1JinUsvnkf2OtvqFrpZQ6Q_fYh7GNu_brydPDV1xY8io";
 
-const CONTACT_FORM_API_URL =
-  "https://script.google.com/macros/s/AKfycbyShA-fZV1b_eYb0UNAwr1FZGwGjTzeGa-QKlomEeVlrQSJhA4/exec";
+const EMAIL_CATCH_API_URL = `https://script.google.com/macros/s/AKfycbzG21hsMSsWiPa5fDd6IbPzrfPvZKVf0Xy7eJ4RmxWh38VHJIQ/exec`;
+
+const CONTACT_FORM_API_URL = EMAIL_CATCH_API_URL;
 
 $(function() {
-  const ScienceScroll = new ScrollText(document.querySelector('#emphasis'));
+  const ScienceScroll = new ScrollText(document.querySelector("#emphasis"));
   ScienceScroll.cycle();
 
   emailCatch(EMAIL_CATCH_API_URL, $("#email-catch"));
