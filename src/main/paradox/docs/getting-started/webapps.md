@@ -49,6 +49,8 @@ Click on a resource and you'll see a more detailed view with important metadata 
 Inside the Details View you'll find a tab called Links. Here you can find two lists,
 one for Incoming Links and one for Outgoing Links. Incoming Links are other datasets that reference this dataset. Outgoing links are other datasets that are referenced inside this one. This is very helpful to navigate down the chains of references you have, by clicking on a link you'll be taken to that resource's details page, or brought to the web url if it's an external resource (a referenced URI, but not a resource integrated into the platform)
 
+![View links](./webapps/img/view-links.png)
+
 ###### Graph View
 
 Inside the Details View you'll also find a tab that contains a WIP graph visualizer.
