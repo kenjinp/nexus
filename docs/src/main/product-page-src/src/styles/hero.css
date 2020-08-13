@@ -77,7 +77,7 @@ canvas {
   }
 } */
 
-@media (max-width: 600px) {
+@media (max-width: 1500px) {
   .hero .gradient {
     height: 120%;
   }
